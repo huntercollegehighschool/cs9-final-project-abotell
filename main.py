@@ -18,7 +18,7 @@ word_letters = list(set(word_letters))
 
 
 print(blanks)
-guess = 9
+guess = 10
 
 
 user_letter = input("Guess a letter: ")
@@ -37,17 +37,18 @@ while len(word_letters) > 0 and guess > 0:
       else:
         print(blanks)
         print("You have used these letters:", used_letters)
-        print("You have", guess + 1, "mistakes left.")
+        print("You have", guess, "mistakes left.")
         user_letter = input("Guess a letter: ")
     else:
       print(blanks)
       guess -= 1
-      print("That was wrong. You have used these letters:", used_letters)
-      print("You have", guess + 1, "mistakes left.")
-      user_letter = input("Guess a letter: ")
+      if guess <= 0:
+        print("That was wrong.")
+        print("You have taken too many guesses. The word was", word, "and you have failed.")
+      else:
+        print("That was wrong. You have used these letters:", used_letters)
+        print("You have", guess, "mistakes left.")
+        user_letter = input("Guess a letter: ")
   else:
     print(blanks)
     user_letter = input("you have already used that letter. Try again: ")
-if guess == 0:
-  print("That was wrong.")
-  print("You have taken too many guesses. The word was", word, "and you have failed.")
