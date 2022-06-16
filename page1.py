@@ -1,1 +1,1 @@
-#Use of this page is optional. If you use code here, make sure either import page1 or from page1 import * appear on your main.py page.
+words = ["whine", "your", "mom", "me", "slay", "queen", "poptarts", "slippery", "kickball", "lazy", "brown", "dog", "slayed", "track", "hundred", "percent", "well", "happy", "jump", "run", "records", "cry", "slay", "hunter", "math", "world", "elated", "robotic", "miraculous"]
